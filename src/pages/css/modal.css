@@ -49,7 +49,7 @@
    padding: 10px;
 }
 .texts-modal{
-   color: black;
+   color: black !important;
 }
 
 .closeButton {
