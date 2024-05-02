@@ -1,0 +1,102 @@
+.lamp-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #1e293b; /* bg-slate-950 */
+    width: 100%;
+    border-radius: 0.5rem;
+    z-index: 0;
+}
+
+.motion-h1 {
+    margin-top: 2rem;
+    background-image: linear-gradient(to bottom right, #cbd5e1, #64748b); /* from-slate-300 to-slate-500 */
+    padding: 1rem 0;
+    background-clip: text;
+    text-align: center;
+    font-size: 3rem; /* text-3xl */
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    color: transparent;
+}
+
+@media (min-width: 768px) {
+    .motion-h1 {
+        font-size: 4.5rem; /* md:text-7xl */
+    }
+}
+
+@media (min-width: 1024px) {
+    .motion-h1 {
+        font-size: 4rem; /* lg:text-6xl */
+    }
+}
+
+.conic-gradient-container {
+    position: absolute;
+    inset: auto right 50%;
+    height: 14rem; /* 56px */
+    overflow: visible;
+    width: 30rem;
+    background-image: conic-gradient(from 70deg at center top, cyan, transparent, transparent);
+}
+
+.conic-gradient-container-right {
+    inset: auto left 50%;
+    background-image: conic-gradient(from 290deg at center top, transparent, transparent, cyan);
+}
+
+.blur-element {
+    position: absolute;
+    top: 50%;
+    height: 12rem; /* 48px */
+    width: 100%;
+    transform: translateY(3rem) scaleX(1.5);
+    background-color: #1e293b; /* bg-slate-950 */
+    filter: blur(32px);
+}
+
+.backdrop-blur {
+    position: absolute;
+    top: 50%;
+    height: 12rem;
+    width: 100%;
+    backdrop-filter: blur(12px);
+    opacity: 0.1;
+}
+
+.large-blur-circle {
+    position: absolute;
+    inset: auto;
+    height: 9rem; /* 36px */
+    width: 28rem;
+    transform: translateY(-50%);
+    border-radius: 100%;
+    background-color: #06b6d4; /* bg-cyan-500 */
+    opacity: 0.5;
+    filter: blur(48px);
+}
+
+.small-blur-circle {
+    position: absolute;
+    inset: auto;
+    height: 9rem;
+    width: 16rem; /* Dynamic size based on initial and whileInView */
+    transform: translateY(-6rem);
+    border-radius: 100%;
+    background-color: #22d3ee; /* bg-cyan-400 */
+    filter: blur(32px);
+}
+
+.horizontal-line {
+    position: absolute;
+    inset: auto;
+    height: 2px;
+    width: 30rem; /* Dynamic size based on initial and whileInView */
+    transform: translateY(-7rem);
+    background-color: #22d3ee; /* bg-cyan-400 */
+}

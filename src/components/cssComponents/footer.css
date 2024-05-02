@@ -1,0 +1,88 @@
+.footer {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between; /* Distribui espaço entre os elementos */
+    text-align: center;
+    padding: 2rem 2rem;
+}
+
+.logo-container, .app-store-container {
+    flex: 1; /* Garante que os containers dos logos ocupem espaço igual e se posicionem nos cantos */
+}
+
+/* Centraliza o texto de direitos autorais e garante que ele fique no centro */
+.copyright {
+    flex: 2; /* Dá mais espaço para o elemento do meio */
+    display: flex; /* Usa Flexbox para alinhar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center !important; /* Centraliza verticalmente */
+}
+
+.copyright-text p{
+    text-indent: 0 !important;
+    color: white; /* Melhora a legibilidade do texto sobre fundo azul */
+    margin-bottom: 0 !important
+}
+
+.logo-footer, .app-store-logo {
+    height: 50px;
+    display: block; /* Garante que as imagens não tenham margem extra de linha */
+}
+
+.logo-footer {
+    margin-left: 2rem; /* Espaço extra no canto esquerdo */
+}
+
+.app-store-logo {
+    margin-right: 2rem; /* Espaço extra no canto direito */
+}
+
+ .app-store-container {
+    flex: 1; /* Garante que os containers dos logos ocupem espaço igual e se posicionem nos cantos */
+    justify-content: right;
+    display: flex;
+}
+
+.logo-mobile, .logo-container-mobile,.mobile-content{
+    display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+    .footer {
+        display: flex;
+        align-items: center; /* Centraliza verticalmente */
+        justify-content: space-between; /* Distribui espaço entre os elementos */
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 2rem;
+    }
+
+    .logo-footer, .app-store-container{
+        display: none;
+    }
+
+    .logo-mobile, .logo-container-mobile, .mobile-content{
+        display: flex;
+    }
+
+    .mobile-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 50px
+    }
+
+    .app-store-container-mobile, .logo-container-mobile{
+        flex:1 ;
+        margin-top: 1rem;
+    }
+
+    .logo-mobile, .app-store-logo-mobile{
+        height: 40px;
+        display: block; /* Garante que as imagens não tenham margem extra de linha */
+    }
+    
+  
+
+}

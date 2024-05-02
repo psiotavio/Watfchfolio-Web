@@ -1,0 +1,10 @@
+.customButton {
+    padding: 10px 20px;
+    background-color: purple;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 16px;
+  }

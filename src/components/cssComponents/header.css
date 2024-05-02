@@ -1,0 +1,119 @@
+header {
+    margin: auto;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 0px 0px 0px;
+    color: #fff;
+}
+
+.menu-icon{
+    color: transparent;
+    pointer-events: none;
+}
+
+.logo img {
+    width: 140px; /* Ajuste o tamanho da imagem conforme necessário */
+}
+
+nav ul {
+    list-style-type: none;
+    margin-right: 2em;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 3.5em; /* Ajuste a distância entre os itens conforme necessário */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+nav ul li a:hover {
+    cursor: pointer;
+    color: #007bff; /* Cor do link quando passa o mouse por cima */
+}
+
+/* Estilos para telas de smartphones */
+@media screen and (max-width: 768px) {
+    header{
+        padding-top: 1em;
+        padding-bottom: 2.5em;
+        width: 90%;
+        z-index: 999;
+    }
+
+    .logo img {
+        width:90px; 
+        margin-left: 1.5em;
+        z-index: 999;
+    }
+
+    .menu-icon {
+      pointer-events: all;
+      margin-right: 0.7em;
+      display: flex;
+      position: relative;
+      align-items: center;
+      cursor: pointer;
+      color: #fff;
+      font-size: 24px; /* Ajuste o tamanho do ícone conforme necessário */
+      z-index: 999;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin-top: -0.1em;
+        margin-left: -4.5em;
+        padding: 0;
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        z-index: 999;
+    }
+    
+    nav ul li {
+        margin: 0.5em; /* Ajuste a distância entre os itens conforme necessário */
+        z-index: 999;
+    }
+
+    
+  
+    .dropdown-content {
+      display: none; /* Esconde o dropdown por padrão */
+      flex-direction: column;
+      background-color: #fc0000;
+      position: absolute;
+      top: 100%; /* Posiciona o dropdown abaixo do ícone */
+      z-index: 999;
+    }
+  
+    .dropdown-open .dropdown-content {
+      display: flex; /* Mostra o dropdown quando a classe dropdown-open está presente */
+      z-index: 999;
+    }
+  
+    .dropdown-content li {
+      padding: 10px 20px; /* Ajuste o espaçamento dos itens do dropdown conforme necessário */
+      z-index: 999;
+    }
+  
+    .dropdown-content a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      z-index: 999;
+    }
+  
+    .dropdown-content a:hover {
+      color: #007bff; /* Cor do link quando passa o mouse por cima */
+      z-index: 999;
+    }
+  }
+  

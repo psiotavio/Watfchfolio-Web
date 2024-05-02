@@ -1,0 +1,21 @@
+
+.web-title{
+    display: none;
+}
+
+.home-image-print{
+    height: 550px;
+}
+
+@media screen and (max-width: 768px) {
+ 
+    .web-title {
+        display: block; /* A menos que você queira inline ou outro tipo de display */
+        font-size: 55px;
+        position: absolute;
+        top: 25rem; /* Posição vertical que você gostou */
+        left: 50%; /* Centraliza horizontalmente: ponto de ancoragem ao meio */
+        transform: translateX(-50%); /* Desloca para a esquerda metade da largura do elemento */
+    }
+    
+}

@@ -1,0 +1,101 @@
+.Watchfolio-Header {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.lancamentos,
+.destaques {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+    align-items: center;
+}
+
+section{
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+  }
+
+
+
+.movie-list {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.lista-de-filmes {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    overflow-x: scroll;
+    width: 100%;
+    gap: 10px;
+    padding-top: 2.5rem;
+    
+}
+
+.movie-list img {
+    width: 150px !important;
+    height: 220px !important;
+    border-radius: 10px;
+    transition: 1s;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0) 5px 5px 150px;
+}
+
+.movie-list img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    filter: brightness(0.8);
+    transition: 1s;
+    border-radius: 25px;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 1) 0px 0px 30px ;
+    
+}
+
+.movie-list li {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+
+.title-movie {
+    text-indent: 0rem !important;
+    text-align: center !important;
+    width: 150px !important;
+}
+
+@media screen and (max-width: 600px) {
+
+.movie-list img {
+    width: 150px !important;
+    height: 220px !important;
+    border-radius: 10px;
+    transition: 1s;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0) 5px 5px 150px !important;
+}
+
+.movie-list img:hover {
+    cursor: pointer !important;
+    transform: scale(1) !important;
+    filter: brightness(1) !important;
+    transition: 1s !important;
+    border-radius: 10px !important;
+    object-fit: cover !important;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 30px !important ;
+    
+}
+}

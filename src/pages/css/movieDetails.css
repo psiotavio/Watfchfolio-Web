@@ -1,0 +1,376 @@
+/* movieDetails.css */
+.movie-details {
+    background-color: #181A20;
+    padding-bottom: 5rem;
+}
+
+.movie-backdrop {
+    display: none;
+}
+
+.lista-de-filmes img {
+    width: 150px !important;
+    height: 220px !important;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-left: 1rem;
+}
+
+.lista-de-filmes img:hover {
+    cursor: pointer !important;
+    transform: scale(1.2) !important;
+    filter: brightness(0.8) !important;
+    transition: 1s !important;
+    border-radius: 20px !important;
+    object-fit: cover !important;
+    box-shadow: rgba(0, 0, 0, 1) 0px 0px 30px !important ;
+}
+
+
+
+.movie-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.movie-poster {
+    max-width: 300px;
+    max-height: 550px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    margin-right: 2%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.movie-overview {
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.movie-genres,
+.movie-release-date,
+.movie-runtime,
+.movie-rating {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.movie-actors {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px 0;
+    margin-left: 2rem;
+}
+
+
+.streaming-platforms {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.actor {
+    text-align: center;
+    width: 120px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.platform {
+    width: 60px;
+    align-items: start;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.actor img {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: rgb(0, 0, 0) 0px 6px 12px -2px, rgba(0, 0, 0, 1) 0px 3px 7px -3px;
+}
+
+.platform img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 100%;
+    box-shadow: rgb(0, 0, 0) 0px 6px 12px -2px, rgba(0, 0, 0, 1) 0px 3px 7px -3px;
+}
+
+.actor p,
+.platform p {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+
+.movie-details-content {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    background-color: rgba(0, 0, 0, 0.50);
+    padding: 100px;
+}
+
+.movie-details-content-background {
+    display: flex;
+    width: 100%;
+    align-self: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 75%;
+}
+
+.movie-details-block {
+    margin-top: 1rem;
+    box-shadow: rgba(0, 0, 0, 1) 0px 5px 20px 0px;
+    margin-bottom: 2rem;
+}
+
+.movie-rate,
+.movie-genres,
+.movie-release-date,
+.movie-runtime,
+.movie-rating {
+    text-indent: 0 !important;
+}
+
+.movie-rate,
+.movie-title,
+.movie-overview,
+.movie-genres,
+.movie-release-date,
+.movie-runtime,
+.movie-rating {
+    text-shadow: 1px 1px 3px black;
+}
+
+.movie-rate {
+    margin-top: 0 !important;
+    background-color: rgba(0, 0, 0, 0.50);
+    border-radius: 5px;
+    border-width: 1.5px;
+    border-color: rgba(255, 255, 255, 0.5);
+    width: 30px;
+    height: 30px;
+    align-content: center;
+    text-align: center;
+    box-shadow: 0px 0px 3px black;;
+}
+
+.details-second-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    gap: 20%;
+}
+
+.details-third-section {
+    display: none;
+}
+
+
+
+
+.section-2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    align-items: stretch;
+    height: 100%;
+}
+
+
+.more-info {
+    border-left-width: 2px;
+    border-left-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.details-movie {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    
+}
+
+.movie-cash,
+.movie-earnings {
+    text-shadow: 1px 1px 3px black;
+    text-indent: 0 !important;
+    margin-left: 1rem;
+}
+
+.movie-title-rate {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.actors-recommendations{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.similar-movies-section{
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px 0;
+    margin-left: 2rem;
+}
+
+.h2-titles {
+    margin-left: 2rem ;
+}
+
+
+
+
+/* movieDetails.css MOBILE*/
+
+@media screen and (max-width: 600px) {
+
+    .movie-details-block {
+        margin-top: 0 !important;
+        box-shadow: rgba(0, 0, 0, 1) 0px 5px 20px 0px;
+        margin-bottom: 2rem;
+    }
+
+    .movie-backdrop {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+    }
+
+    .movie-details-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        align-self: center;
+        background-color: #181A20;
+        padding: 15px !important;
+    }
+
+    .movie-poster {
+        align-self: center;
+        max-width: 150px;
+        max-height: 250px;
+        object-fit: cover;
+        display: block;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        margin-right: 2%;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+
+    .movie-info {
+        display: flex;
+        width: 100% !important;
+    }
+
+    .movie-details-block {
+        margin-top: 1rem;
+        box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px !important;
+        margin-bottom: 2rem;
+    }
+
+    .section-2{
+        flex-direction: column;
+    }
+
+    .actors-recommendations{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+    .movie-actors, .similar-movies-section {
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+        padding: 10px 0;
+        margin-left: 0px !important;
+    }
+
+    .h2-titles {
+        margin-left: 0 !important;
+    }
+
+    .lista-de-filmes img {
+        margin-left: 0.75rem !important;
+    }
+
+    .more-info {
+        display: none;
+    }
+
+    .details-third-section {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-top: 2%;
+        gap: 20%;
+    }
+
+    .movie-rate {
+        margin-top: 0 !important;
+        background-color: rgba(0, 0, 0, 0.50);
+        border-radius: 5px;
+        border-width: 1.5px;
+        border-color: rgba(255, 255, 255, 0.5);
+        width: 30px;
+        height: 30px;
+        align-content: center !important;
+        text-align: center !important;
+        align-items: center !important;
+        box-shadow: 0px 0px 3px black;;
+    }
+
+    .movie-title-rate {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .lista-de-filmes img:hover {
+        cursor: pointer !important;
+        transform: scale(1) !important;
+        filter: brightness(1) !important;
+        transition: 1s !important;
+        border-radius: 10px !important;
+        object-fit: cover !important;
+        box-shadow: rgba(0, 0, 0, 0) 0px 0px 30px !important ;
+        
+    }
+}

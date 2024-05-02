@@ -1,0 +1,68 @@
+/* SearchBar.css */
+
+.search-bar {
+    position: relative;
+    width: 100%;
+    max-width: 450px; /* Ajuste conforme a necessidade */
+    border-radius: 100%;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px; /* Tamanho da fonte do input */
+    border: 2px solid #ccc; /* Borda do input */
+    border-radius: 5px; /* Arredondamento da borda do input */
+}
+
+.search-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+    z-index: 1000;
+    height: 20rem;
+    overflow-y: scroll;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.search-bar li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar li:hover {
+    background-color: #f8f8f8;
+}
+
+.search-bar img {
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 50px; /* Largura da imagem */
+    height: 75px; /* Altura da imagem */
+}
+
+/* Estilização de fontes e cores */
+.search-bar li span {
+    font-size: 14px;
+    color: #333;
+}
+
+@media screen and (max-width: 600px) {
+    .search-bar {
+        margin-top: 5rem;
+        position: relative;
+        width: 100%;
+        max-width: 350px; /* Ajuste conforme a necessidade */
+        border-radius: 100%;
+    }
+}

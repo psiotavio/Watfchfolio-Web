@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  background-color: #020617;
+}
+
+body{
+  background-color: #020617;
 }
 
 .App-logo {
@@ -35,4 +40,52 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.custom-header {
+  font-size: 3rem; /* text-3xl */
+  font-weight: bold; /* font-bold */
+  text-align: center; /* text-center */
+  color: white; /* text-white */
+  position: relative; /* relative */
+  z-index: 20; /* z-20 */
+}
+
+@media (min-width: 768px) { /* Assume md: applies from 768px, adjust as necessary */
+  .custom-header {
+      font-size: 4.5rem; /* md:text-7xl */
+  }
+}
+
+@media (min-width: 1024px) { /* Assume lg: applies from 1024px, adjust as necessary */
+  .custom-header {
+      font-size: 4rem; /* lg:text-6xl */
+  }
+}
+
+.custom-full-size {
+  width: 100%; /* w-full */
+  height: 100%; /* h-full */
+}
+
+.custom-full-screen {
+  width: 100%; /* w-full */
+  position: absolute; /* absolute */
+  top: 0; /* inset-0 */
+  right: 0; /* inset-0 */
+  bottom: 0; /* inset-0 */
+  left: 0; /* inset-0 */
+  height: 100vh; /* h-screen */
+}
+
+.custom-main-container {
+  height: 40rem; /* h-[40rem] */
+  position: relative; /* relative */
+  width: 100%; /* w-full */
+  background-color: black; /* bg-black */
+  display: flex; /* flex */
+  flex-direction: column; /* flex-col */
+  align-items: center; /* items-center */
+  justify-content: center; /* justify-center */
+  overflow: hidden; /* overflow-hidden */
 }
