@@ -81,6 +81,7 @@ const MovieDetails = () => {
         const screenplays = creditsResponse.data.crew.filter(
           (member: any) => member.job === "Screenplay"
         );
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const age_ratings = detailsResponse.data.release_dates.results
           .find((result: any) => result.iso_3166_1 === "BR")
           .release_dates.map((release: any) => release.certification);
