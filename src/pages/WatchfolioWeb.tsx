@@ -128,9 +128,7 @@ const SearchBar = () => {
             {upcomingMovies.map((movie) => (
               <li
                 key={movie.id}
-                
                 onClick={() => navigate(`/movie/${movie.id}`)}
-
               >
                 <img
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}

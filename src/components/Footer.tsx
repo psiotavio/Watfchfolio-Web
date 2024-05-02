@@ -1,5 +1,4 @@
 import React from "react";
-import apple from "../assets/appleLogo.png"; // Caminho correto da imagem da App Store
 import appStore from "../assets/appstore.webp"; // Caminho correto da imagem da App Store
 import myLogo from "../assets/logo.png";
 import "./cssComponents/footer.css"; // Caminho correto do CSS
