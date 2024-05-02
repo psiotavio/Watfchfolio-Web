@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
+
 import axios from "axios";
 import "./css/movieDetails.css";
 import { useNavigate } from "react-router-dom";
+import "./css/modal.css";
+import AppStoreLogo from "../assets/appstore.webp";
+import VerticalLogo from "../assets/VerticalLogo.png";
 
 interface MovieDetailsProps {
   id: number;
@@ -29,8 +36,16 @@ interface SimilarMovie {
   poster_path: string;
 }
 
+function useQuery() {
+  const { search } = useLocation();
+  return new URLSearchParams(search);
+}
+
 const MovieDetails = () => {
   const { id } = useParams<{ id: string }>();
+  const query = useQuery();
+  const [showModal, setShowModal] = useState(query.get("popup") === "true");
+
   const [movie, setMovie] = useState<MovieDetailsProps | null>(null);
   const [similarMovies, setSimilarMovies] = useState<SimilarMovie[]>([]);
   const [loading, setLoading] = useState(true);
@@ -192,7 +207,6 @@ const MovieDetails = () => {
                         {movie.revenue.toLocaleString()}
                       </p>
                     </div>
-
                   </div>
                   <div className="streaming-platforms">
                     {movie.streamingPlatforms.map((platform) => (
@@ -271,6 +285,48 @@ const MovieDetails = () => {
               </div>
             </div>
           </section>
+        </div>
+      )}
+
+      {showModal && (
+        <div className="modal">
+          <div className="modal-content">
+            <div className="closeButton">
+              <FontAwesomeIcon
+                icon={faTimes}
+                fontSize={20}
+                style={{alignSelf: "center", padding: "15px"}}
+                onClick={() => setShowModal(false)}
+              />
+            </div>
+            <div className="modal-content-container">
+              <img
+                src={VerticalLogo}
+                alt="Watchfolio Logo"
+                className="WatchfolioLogoModal"
+              />
+              <h2 className="texts-modal">Baixe Watchfolio na App Store</h2>
+              <p className="texts-modal">
+                Aproveite a melhor experiência de entretenimento com o nosso
+                aplicativo Watchfolio! Este filme é apenas uma amostra do que
+                você pode explorar. Com o Watchfolio, você terá acesso a
+                detalhes, recomendações e muito mais sobre seus filmes
+                favoritos.
+              </p>
+              <h3 className="texts-modal-h3">Clique aqui e baixe agora!</h3>
+              <a
+                href="https://apps.apple.com/us/app/watchfolio/id6496133036"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={AppStoreLogo}
+                  alt="App Store Logo"
+                  className="AppStoreModal"
+                />
+              </a>
+            </div>
+          </div>
         </div>
       )}
     </div>

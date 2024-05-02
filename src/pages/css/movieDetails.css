@@ -65,6 +65,22 @@
     margin-left: 2rem;
 }
 
+.movie-actors::-webkit-scrollbar {
+    height: 10px; /* Define a altura da barra de rolagem */
+ }
+ 
+ /* Personalização da trilha (fundo) */
+ .movie-actors::-webkit-scrollbar-track {
+    background-color: #101218; /* Torna o fundo transparente */
+    border-radius: 10px; /* Torna a alça arredondada */
+ }
+ 
+ /* Personalização da alça (thumb) */
+ .movie-actors::-webkit-scrollbar-thumb {
+    background-color: #2C2F37; /* Define a cor preta para a alça */
+    border-radius: 10px; /* Torna a alça arredondada */
+ }
+
 
 .streaming-platforms {
     display: flex;
@@ -235,6 +251,7 @@
     display: flex;
     flex-direction: column;
     width: 80%;
+    padding: 15px;
 }
 
 .similar-movies-section{

@@ -39,8 +39,25 @@ section{
     width: 100%;
     gap: 10px;
     padding-top: 2.5rem;
-    
 }
+
+
+/* Personalização da barra de rolagem */
+.lista-de-filmes::-webkit-scrollbar {
+    height: 10px; /* Define a altura da barra de rolagem */
+ }
+ 
+ /* Personalização da trilha (fundo) */
+ .lista-de-filmes::-webkit-scrollbar-track {
+    background-color: #101218; /* Torna o fundo transparente */
+    border-radius: 10px; /* Torna a alça arredondada */
+ }
+ 
+ /* Personalização da alça (thumb) */
+ .lista-de-filmes::-webkit-scrollbar-thumb {
+    background-color: #2C2F37; /* Define a cor preta para a alça */
+    border-radius: 10px; /* Torna a alça arredondada */
+ }
 
 .movie-list img {
     width: 150px !important;
