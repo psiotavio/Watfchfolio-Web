@@ -270,6 +270,8 @@
 
 
 
+
+
 /* movieDetails.css MOBILE*/
 
 @media screen and (max-width: 600px) {
@@ -391,4 +393,5 @@
         box-shadow: rgba(0, 0, 0, 0) 0px 0px 30px !important ;
         
     }
+
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import appStore from "../assets/appstore.webp"; // Caminho correto da imagem da App Store
+import playStore from "../assets/playStore.webp"; 
 import myLogo from "../assets/logo.png";
 import "./cssComponents/footer.css"; // Caminho correto do CSS
 
@@ -24,6 +25,13 @@ const Footer = () => {
             <img
               src={appStore}
               alt="Disponível na App Store"
+              className="app-store-logo"
+            />
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.psiotavio.MovieChecklist&hl=pt_BR&gl=US">
+            <img
+              src={playStore}
+              alt="Disponível na play Store"
               className="app-store-logo"
             />
           </a>

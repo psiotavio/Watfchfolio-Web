@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import "./css/modal.css";
 import AppStoreLogo from "../assets/appstore.webp";
 import VerticalLogo from "../assets/VerticalLogo.png";
+import playStore from "../assets/playStore.webp";
 
 interface MovieDetailsProps {
   id: number;
@@ -295,7 +296,7 @@ const MovieDetails = () => {
               <FontAwesomeIcon
                 icon={faTimes}
                 fontSize={20}
-                style={{alignSelf: "center", padding: "15px"}}
+                style={{ alignSelf: "center", padding: "15px" }}
                 onClick={() => setShowModal(false)}
               />
             </div>
@@ -305,7 +306,6 @@ const MovieDetails = () => {
                 alt="Watchfolio Logo"
                 className="WatchfolioLogoModal"
               />
-              <h2 className="texts-modal">Baixe Watchfolio na App Store</h2>
               <p className="texts-modal">
                 Aproveite a melhor experiência de entretenimento com o nosso
                 aplicativo Watchfolio! Este filme é apenas uma amostra do que
@@ -314,17 +314,30 @@ const MovieDetails = () => {
                 favoritos.
               </p>
               <h3 className="texts-modal-h3">Clique aqui e baixe agora!</h3>
-              <a
-                href="https://apps.apple.com/us/app/watchfolio/id6496133036"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={AppStoreLogo}
-                  alt="App Store Logo"
-                  className="AppStoreModal"
-                />
-              </a>
+              <div className="modal-buttons-store">
+                <a
+                  href="https://apps.apple.com/us/app/watchfolio/id6496133036"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={AppStoreLogo}
+                    alt="App Store Logo"
+                    className="AppStoreModal"
+                  />
+                </a>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.psiotavio.MovieChecklist&hl=pt_BR&gl=US"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={playStore}
+                    alt="App Store Logo"
+                    className="AppStoreModal"
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>
