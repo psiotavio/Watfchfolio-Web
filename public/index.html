@@ -1,76 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
-
-    <script>
-      // Define dataLayer and the gtag function.
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      
-      // Set default consent to 'denied' as a placeholder
-      // Determine actual values based on your own requirements
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
-      });
-      </script>
-    
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LH0Y1M2EXG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LH0Y1M2EXG');
-</script>
-
-<script>
-  function consentGrantedAdStorage() {
-    gtag('consent', 'update', {
-      'ad_storage': 'granted'
-    });
-    document.getElementById('cookie-consent').style.display = 'none';
-  }
-</script>
-
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="google-adsense-account" content="ca-pub-1771446730721916">
-    <meta
-    name="description"
-    content="Watchfolio: o app para gerenciar seus filmes assistidos. Avalie, registre e descubra novas recomendações de filmes. Filtre filmes por gênero e plataforma de streaming, crie listas de visualização e veja estatísticas do usuário. Sortee filmes aleatórios e acompanhe os melhores assistidos no mês e no ano. Watchfolio facilita o gerenciamento e descoberta de filmes."
- />
- <meta name="keywords" content="Watchfolio, filmes, gerenciar filmes, recomendações de filmes, streaming, avaliação de filmes, lista de filmes, tracker de filmes, movies, IMDB" />
- <meta property="og:title" content="Watchfolio: Gerencie e Avalie Seus Filmes" />
- <meta property="og:description" content="Watchfolio facilita o gerenciamento e descoberta de filmes. Avalie, registre, receba recomendações e veja estatísticas detalhadas." />
- <meta property="og:image" content="%PUBLIC_URL%/logo192.png" />
- <meta property="og:url" content="https://watchfolio.com.br" />
-     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1771446730721916"
-     crossorigin="anonymous"></script>
- 
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    
+    <!-- Meta Tags Importantes para SEO -->
+    <meta name="description" content="Watchfolio Web: Descubra, registre e avalie filmes assistidos. Receba recomendações personalizadas e descubra onde assistir seus filmes favoritos nas plataformas de streaming. Crie listas de filmes para assistir mais tarde e acompanhe suas estatísticas de filmes assistidos. Alternativa ao IMDb, Rotten Tomatoes e Letterboxd." />
+    <meta name="keywords" content="Watchfolio, registrar filmes, avaliação de filmes, melhores filmes, assistir filmes, filmes recomendados, plataforma de streaming, IMDb, Rotten Tomatoes, Letterboxd, rastreador de filmes, recomendações de filmes, estatísticas de filmes" />
+    <meta name="author" content="Otávio Cunha" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph (Para Redes Sociais) -->
+    <meta property="og:title" content="Watchfolio Web: Descubra e Avalie Seus Filmes" />
+    <meta property="og:description" content="Watchfolio Web permite registrar, avaliar, e receber recomendações de filmes. Descubra onde assistir e acompanhe suas estatísticas de filmes assistidos. Alternativa ao IMDb, Rotten Tomatoes e Letterboxd." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://watchfolio.com.br" />
+    <meta property="og:image" content="%PUBLIC_URL%/logo192.png" />
+    <meta property="og:site_name" content="Watchfolio Web" />
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Watchfolio Web: Descubra e Avalie Seus Filmes" />
+    <meta name="twitter:description" content="Descubra filmes, registre o que assistiu e receba recomendações personalizadas com o Watchfolio. Plataforma para descobrir novos filmes, semelhante ao IMDb, Rotten Tomatoes e Letterboxd." />
+    <meta name="twitter:image" content="%PUBLIC_URL%/logo192.png" />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>Watchfolio</title>
+    <!-- Google AdSense script -->
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4303499199669342"
+      crossorigin="anonymous"></script>
 
+    <!-- Google Analytics (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LH0Y1M2EXG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LH0Y1M2EXG');
+    </script>
 
+    <!-- JSON-LD para dados estruturados -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Watchfolio Web",
+      "url": "https://watchfolio.com.br",
+      "description": "Watchfolio Web: Descubra, registre e avalie filmes assistidos. Receba recomendações personalizadas, crie listas para assistir mais tarde e veja onde assistir seus filmes favoritos nas plataformas de streaming.",
+      "author": {
+        "@type": "Person",
+        "name": "Otávio Cunha",
+        "url": "https://www.tiktok.com/@otaviocunhap"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Watchfolio",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "%PUBLIC_URL%/logo192.png"
+        }
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://watchfolio.com.br/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <title>Watchfolio Web: Descubra e Avalie Seus Filmes Favoritos</title>
 
     <style>
       #cookie-consent {
@@ -96,26 +95,16 @@
         background-color: #45a049;
       }
     </style>
-
   </head>
+  
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    
-    
+
+    <!-- Consentimento de Cookies -->
     <div id="cookie-consent">
-      This website uses cookies to ensure you get the best experience. 
-      <button onclick=consentGrantedAdStorage()>Yes</button>
+      Este site utiliza cookies para garantir a melhor experiência. 
+      <button onclick="consentGrantedAdStorage()">Aceitar</button>
     </div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
