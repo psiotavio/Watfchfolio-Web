@@ -9,6 +9,7 @@ import "./App.css";
 import "./Style.css";
 import MovieDetails from "./pages/MovieDetails.tsx";
 import Footer from "./components/Footer.tsx";
+import UserProfile from "./pages/UserProfile.tsx";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/watchfolioWeb" element={<WatchfolioWeb />} />
           <Route path="/movie/:id" element={<MovieDetails />} />
+          <Route path="/profile/:userId" element={<UserProfile />} />
         </Routes>
         <Footer />
       </div>

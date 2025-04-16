@@ -68,3 +68,43 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Watchfolio Web
+
+Web version of the Watchfolio app for movie tracking and reviews.
+
+## Configuration
+
+### Environment Variables
+
+The application uses environment variables to store sensitive information like API keys. To set up your environment:
+
+1. Copy the `.env.example` file to a new file named `.env`:
+   ```
+   cp .env.example .env
+   ```
+
+2. Edit the `.env` file to include your API keys:
+   ```
+   REACT_APP_TMDB_API_KEY=your_tmdb_api_key_here
+   ```
+
+3. Replace `your_tmdb_api_key_here` with your actual TMDB API key.
+
+**Note**: The `.env` file is excluded from version control in `.gitignore` to protect sensitive information.
+
+## Development
+
+To start the development server:
+
+```
+npm start
+```
+
+## Building
+
+To create a production build:
+
+```
+npm run build
+```

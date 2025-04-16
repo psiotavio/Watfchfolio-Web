@@ -21,15 +21,11 @@ p {
 }
 
 .texts-Section-style1 {
-  margin-left: 10%;
-  margin-right: 10%;
   align-items: center;
   display: flex;
   flex-direction: row;
 }
 .texts-Section-style2 {
-  margin-left: 10%;
-  margin-right: 10%;
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -85,15 +81,11 @@ p {
 
 
  .texts-Section-style1 {
-    margin-left: 2rem !important;
-    margin-right: 2rem !important;
     align-items: center !important;
     display: flex !important;
     flex-direction: column !important;
   }
  .texts-Section-style2 {
-    margin-left: 2rem !important;
-    margin-right: 2rem !important;
     align-items: center !important;
     display: flex !important;
     margin-top: 2rem;

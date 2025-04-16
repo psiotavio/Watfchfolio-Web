@@ -37,7 +37,37 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+      
+      // Configura o consentimento padrão (negado até que o usuário aceite)
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied'
+      });
+      
       gtag('config', 'G-LH0Y1M2EXG');
+      
+      // Função para gerenciar o consentimento de cookies
+      function consentGrantedAdStorage() {
+        // Configura o Google Analytics para consentimento
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted'
+        });
+        
+        // Esconde o banner de cookies
+        document.getElementById('cookie-consent').style.display = 'none';
+        
+        // Opcional: Salva o consentimento em localStorage para lembrar na próxima visita
+        localStorage.setItem('cookieConsent', 'true');
+      }
+      
+      // Verifica se o usuário já deu consentimento anteriormente
+      window.addEventListener('DOMContentLoaded', function() {
+        if (localStorage.getItem('cookieConsent') === 'true') {
+          document.getElementById('cookie-consent').style.display = 'none';
+          consentGrantedAdStorage();
+        }
+      });
     </script>
 
     <!-- JSON-LD para dados estruturados -->
@@ -106,5 +136,50 @@
       Este site utiliza cookies para garantir a melhor experiência. 
       <button onclick="consentGrantedAdStorage()">Aceitar</button>
     </div>
+
+    <script>
+      // Script para redirecionamento de perfil
+      document.addEventListener('DOMContentLoaded', function() {
+        // Verifica se o usuário está acessando um perfil
+        if (window.location.pathname.startsWith('/profile/')) {
+          const userId = window.location.pathname.split('/profile/')[1];
+          
+          // Tenta abrir o aplicativo
+          const appUrl = `watchfolio://profile/${userId}`;
+          
+          // Redireciona para o app
+          window.location.href = appUrl;
+          
+          // Se o aplicativo não abrir em 2 segundos, permanece na versão web
+          // ou redireciona para a loja de aplicativos
+          setTimeout(function() {
+            // Detecta o sistema operacional para redirecionar para a loja correta
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            
+            if (/android/i.test(userAgent)) {
+              // Redireciona para Google Play
+              window.location.href = 'https://play.google.com/store/apps/details?id=com.psiotavio.MovieChecklist';
+            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+              // Redireciona para App Store
+              window.location.href = 'https://apps.apple.com/app/id{6496133036}';
+            } else {
+              // Permanece no site ou exibe uma mensagem
+              const appBanner = document.createElement('div');
+              appBanner.style.position = 'fixed';
+              appBanner.style.top = '0';
+              appBanner.style.left = '0';
+              appBanner.style.width = '100%';
+              appBanner.style.backgroundColor = '#000';
+              appBanner.style.color = '#fff';
+              appBanner.style.padding = '12px';
+              appBanner.style.textAlign = 'center';
+              appBanner.style.zIndex = '9999';
+              appBanner.innerHTML = 'Baixe o aplicativo Watchfolio para uma melhor experiência!';
+              document.body.appendChild(appBanner);
+            }
+          }, 2000);
+        }
+      });
+    </script>
   </body>
 </html>
