@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home.tsx";
 import Sobre from "./pages/Sobre.tsx";
 import WatchfolioWeb from "./pages/WatchfolioWeb.tsx";
+import AccountDelete from "./pages/accountDelete.tsx";
+import AccountDeleteEn from "./pages/accountDelete-en.tsx";
 
 import "./App.css";
 import "./Style.css";
@@ -23,6 +25,8 @@ function App() {
           <Route path="/watchfolioWeb" element={<WatchfolioWeb />} />
           <Route path="/movie/:id" element={<MovieDetails />} />
           <Route path="/profile/:userId" element={<UserProfile />} />
+          <Route path="/deleteAccount" element={<AccountDelete />} />
+          <Route path="/deleteAccount-en" element={<AccountDeleteEn />} />
         </Routes>
         <Footer />
       </div>
